@@ -1,0 +1,11 @@
+name: practice
+on:
+  push:
+    branches:
+      main
+  
+job:
+  context job:
+    runs_on: ubuntu_latest
+    steps:
+    -run: "echo Repo: ${{ github.Repository}} by ${{ github.actor}}"
