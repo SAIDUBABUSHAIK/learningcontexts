@@ -20,6 +20,10 @@ jobs:
       public_name: sai
     steps:
       - run: echo '${{ env.public_name }}'
+  vars-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'var_user_name = ${{ vars.USERNAME }} AND password = ${{ secrets.PASSWORD }}'
 
       
 
