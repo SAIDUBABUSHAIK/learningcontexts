@@ -9,16 +9,17 @@ jobs:
   Environmental-job:
     runs-on: ubuntu-latest
     steps:
-      run: echo '$ {{ env.GLOBAL_NAME }}'
+      - run: echo '${{ env.GLOBAL_NAME }}'
+      - run: echo '${{ env.LOCAL_NAME }}'
     env:
       LOCAL_NAME: SAIDU BABU
-      steps:
-        run: echo '$ {{ env.LOCAL_NAME }}'
+  
   linux-job:
+    runs-on: ubuntu-latest
     env:
       public_name: sai
-      steps:
-        run: echo '$ {{ env.public_name }}'
+    steps:
+      - run: echo '${{ env.public_name }}'
 
       
 
