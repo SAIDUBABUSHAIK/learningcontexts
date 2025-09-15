@@ -8,4 +8,4 @@ jobs:
   context job:
     runs-on: ubuntu_latest
     steps:
-    -run: "echo Repo: ${{ github.Repository}} by ${{ github.actor}}"
+      - run: "echo Repo: ${{ github.Repository}} by ${{ github.actor}}"
