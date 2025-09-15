@@ -5,7 +5,7 @@ on:
       main
   
 jobs:
-  context job:
+  context-job:
     runs-on: ubuntu_latest
     steps:
       - run: "echo Repo: ${{ github.Repository}} by ${{ github.actor}}"
