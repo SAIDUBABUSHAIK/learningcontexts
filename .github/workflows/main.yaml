@@ -3,23 +3,23 @@ on:
   push:
     branches:
       main
-  
+env: 
+  GLOBAL_NAME: SAIDU  
 jobs:
-  context-job:
+  Environmental-job:
     runs-on: ubuntu-latest
     steps:
-      - run: "echo Repo: ${{ github.Repository}} by ${{ github.actor}}"
-        name: show complete github context
-      - run: echo '${{ toJson(github)}}'
-        name: show complete runner context
-      - run: echo '${{ toJson(runner)}}'
-        name: show complete env context
-      - run: echo '${{ toJson(env)}}'
-        name: show complete matrix context
-      - run: echo '${{ toJson(matrix) }}'
-        name: show commit author name
-      - run: echo '${{github.event.head_commit.author.name}}'
-        name: show commit author email
-      - run: echo '${{github.event.head_commit.author.email}}'
+      run: echo '$ {{ env.GLOBAL_NAME }}'
+    env:
+      LOCAL_NAME: SAIDU BABU
+      steps:
+        run: echo '$ {{ env.LOCAL_NAME }}'
+  linux-job:
+    env:
+      public_name: sai
+      steps:
+        run: echo '$ {{ env.public_name }}'
 
       
+
+
