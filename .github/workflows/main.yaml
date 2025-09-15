@@ -9,3 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: "echo Repo: ${{ github.Repository}} by ${{ github.actor}}"
+        name: show complete github context
+      - run: echo '${{ toJson(github)}}'
+        name: show complete runner context
+      - run: echo '${{ toJson(runner)}}'
+        name: show complete env context
+      - run: echo '${{ toJson(env)}}'
+        name: show complete matrix context
+      - run: echo '${{ toJson(matrix) }}'
