@@ -17,3 +17,7 @@ jobs:
       - run: echo '${{ toJson(env)}}'
         name: show complete matrix context
       - run: echo '${{ toJson(matrix) }}'
+        name: show commit author name
+      - run: echo '${{github.event.head_commit.author.name}}'
+        name: show commit author email
+      - run: echo '${{github.event.head_commit.author.email}}'
